@@ -1,0 +1,12 @@
+# Generate dummy dataset
+np.random.seed(30)  # for reproducibility
+X = np.linspace(0, 10, 50).reshape(-1, 1)   # feature values between 0 and 10
+y = 3*X.squeeze() + 5 + np.random.randn(50)*2   # true relation + noise
+
+# Plot the data
+plt.scatter(X, y, color='blue', label='Data points')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.title('Dummy Dataset')
+plt.legend()
+plt.show()
