@@ -1,0 +1,20 @@
+# Train Ridge and Lasso
+ridge = Ridge(alpha=10)   # alpha = regularization strength
+lasso = Lasso(alpha=0.5)
+
+ridge.fit(X, y)
+lasso.fit(X, y)
+
+y_ridge = ridge.predict(X)
+y_lasso = lasso.predict(X)
+
+# Compare models visually
+plt.scatter(X, y, color='blue', label='Data points')
+plt.plot(X, y_pred, color='red', label='Linear Regression')
+plt.plot(X, y_ridge, color='green', linestyle='--', label='Ridge Regression')
+plt.plot(X, y_lasso, color='purple', linestyle=':', label='Lasso Regression')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.title('Comparing Linear, Ridge, and Lasso')
+plt.legend()
+plt.show()
