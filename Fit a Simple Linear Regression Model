@@ -1,0 +1,14 @@
+# Train Linear Regression
+
+lin_reg = LinearRegression()
+lin_reg.fit(X, y)  # fit model to data
+y_pred = lin_reg.predict(X)  # predictions on training data
+
+# Plot regression line
+plt.scatter(X, y, color='blue', label='Data points')
+plt.plot(X, y_pred, color='red', linewidth=2, label='Linear Regression')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.title('Linear Regression Fit')
+plt.legend()
+plt.show()
