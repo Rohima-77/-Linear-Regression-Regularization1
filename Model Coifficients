@@ -1,0 +1,3 @@
+print('Linear Regression Coef:', lin_reg.coef_, 'Intercept:', lin_reg.intercept_)
+print('Ridge Coef:', ridge.coef_, 'Intercept:', ridge.intercept_)
+print('Lasso Coef:', lasso.coef_, 'Intercept:', lasso.intercept_)
